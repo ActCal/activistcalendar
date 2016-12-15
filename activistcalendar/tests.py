@@ -60,3 +60,29 @@ class ProfileTestCase(TestCase):
         self.assertEqual(david.personal_message, "Hello")
         david.user_full_name = "David Tester"
         self.assertEqual(david.user_full_name, "David Tester")
+
+
+class OutsideContactTestCase(TestCase):
+    def setUp(self):
+        OutsideContact.objects.create(
+            contact_id="1",
+            contact_name="David Test",
+            contact_email="david314@gmail.com",
+            contact_subject="Subject field test",
+            contact_message="Hello from the message field"
+        )
+        OutsideContact.objects.create(
+            contact_id="2",
+            contact_name="Donald Test",
+            contact_email="donald159@gmail.com",
+            contact_subject="Subject field test",
+            contact_message="Hello from the messages field"
+        )
+
+    def test_form_is_filled(self):
+        david = OutsideContact.objects.get(contact_name="David Test")
+        self.assertEqual(david.contact_id, "1")
+        self.assertEqual(david.contact_name="David Test")
+        self.assertEqual(david.contact_email="david314@gmail.com")
+        self.assertEqual(david.contact_subject="Subject field test")
+        self.assertEqual(david.contact_message="Hello from the message field")
