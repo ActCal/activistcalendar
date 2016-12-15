@@ -1,5 +1,0 @@
-C:\Users\Raine\Documents\Web_Development\activistcalendar\bin\Microsoft.PythonTools.WebRole.dll
-C:\Users\Raine\Documents\Web_Development\activistcalendar\bin\AzureSetup.cfg
-C:\Users\Raine\Documents\Web_Development\activistcalendar\bin\Microsoft.PythonTools.AzureSetup.exe
-C:\Users\Raine\Documents\Web_Development\activistcalendar\bin\Microsoft.PythonTools.AzureSetup.exe.config
-C:\Users\Raine\Documents\Web_Development\activistcalendar\bin\wfastcgi.py
