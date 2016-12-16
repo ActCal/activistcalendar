@@ -3,6 +3,7 @@ from django import forms
 from django.contrib.auth import models as authmodels
 from uuidfield import UUIDField
 
+
 class ActivistGroup(models.Model):
     group_id = UUIDField(auto=True, unique=True)
     name = models.TextField()
@@ -14,9 +15,11 @@ class ActivistGroup(models.Model):
     country = models.TextField(default="United States")
     group_url = models.URLField()
 
+
 class ActivistInterest(models.Model):
     interest_id = UUIDField(auto=True, unique=True)
     interest_name = models.TextField(unique=True)
+
 
 class ActivistEvent(models.Model):
     event_id = UUIDField(auto=True, unique=True)
@@ -31,6 +34,7 @@ class ActivistEvent(models.Model):
     contact_email = models.EmailField(max_length=2048)
     event_url = models.URLField()
     description = models.TextField()
+
 
 class Profile(authmodels.User):
     user_id = UUIDField(auto=True, unique=True)
