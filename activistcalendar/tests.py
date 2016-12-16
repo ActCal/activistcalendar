@@ -9,6 +9,7 @@ from django.test import TestCase
 from django.core.exceptions import ObjectDoesNotExist
 from activistcalendar.models import Profile
 
+
 class ProfileTestCase(TestCase):
     def setUp(self):
         Profile.objects.create(
@@ -27,7 +28,6 @@ class ProfileTestCase(TestCase):
             website="http://www.bar.org/",
             personal_message="Aloha",
         )
-
 
     def test_profile_exists(self):
         david = Profile.objects.get(user_email="david314@gmail.com")
